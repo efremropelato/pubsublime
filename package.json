@@ -1,0 +1,33 @@
+{
+  "name": "router_wamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "npm run build && node dist",
+    "restart": "rimraf dist && npm run start",
+    "dev": "nodemon --exec npm run restart",
+    "start:example": "npm run build && node dist/example.js",
+    "restart:example": "rimraf dist && npm run start:example",
+    "example": "nodemon --exec npm run restart:example",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "mqtt-packet": "^6.7.0",
+    "qlobber": "^5.0.3",
+    "ws": "^7.4.2"
+  }
+}
